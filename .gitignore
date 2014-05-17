@@ -1,0 +1,4 @@
+.vim/bundle/*
+!.vim/bundle/.gitkeep
+!.vim/bundle/neobundle.vim
+.vim/.netrwhist

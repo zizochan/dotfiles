@@ -1,0 +1,5 @@
+escape ^z^z
+startup_message off
+hardstatus alwayslastline " %`%-w%{=b bw}%n %t%{-}%+w"
+shell -$SHELL
+
