@@ -1,0 +1,14 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[color]
+	ui = auto
+[alias]
+	ch = checkout
+	br = branch
+	st = status
+	ci = commit
+[push]
+	default = current
