@@ -16,6 +16,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'syntastic'
+NeoBundle 'jiangmiao/auto-pairs'
 
  call neobundle#end()
 
