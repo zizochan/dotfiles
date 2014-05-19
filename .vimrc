@@ -15,6 +15,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'The-NERD-tree'
+NeoBundle 'syntastic'
 
  call neobundle#end()
 
