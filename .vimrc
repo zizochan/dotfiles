@@ -13,10 +13,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'romanvbabenko/rails.vim'
 
  call neobundle#end()
 
