@@ -17,6 +17,7 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
+NeoBundle 'slim-template/vim-slim'
 
  call neobundle#end()
 
