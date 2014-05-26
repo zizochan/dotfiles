@@ -18,10 +18,15 @@ NeoBundle 'syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'airblade/vim-gitgutter'
 
  call neobundle#end()
 
 filetype plugin indent on
+
+" gitgutter
+nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
 "隠しファイルを表示する。
 let NERDTreeShowHidden = 1
