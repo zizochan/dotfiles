@@ -14,7 +14,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'The-NERD-tree'
-NeoBundle 'syntastic'
+" NeoBundle 'scrooloose/syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'slim-template/vim-slim'
