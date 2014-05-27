@@ -14,11 +14,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'The-NERD-tree'
-" NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'airblade/vim-gitgutter'
+" NeoBundle 'slim-template/vim-slim'
+" NeoBundle 'airblade/vim-gitgutter'
 
  call neobundle#end()
 
@@ -27,6 +27,9 @@ filetype plugin indent on
 " gitgutter
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
+" syntastic
+let g:loaded_syntastic_slim_slimrb_checker = 0
 
 "隠しファイルを表示する。
 let NERDTreeShowHidden = 1
