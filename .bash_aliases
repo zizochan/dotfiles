@@ -1,6 +1,7 @@
 # lifehack
 alias cp='cp -i'
 alias diff='colordiff'
+alias less='less -R'
 alias ll='ls -al'
 alias mv='mv -i'
 alias rm='rm -i'
