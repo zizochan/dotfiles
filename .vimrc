@@ -17,6 +17,7 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
+NeoBundle 'sudo.vim'
 " NeoBundle 'slim-template/vim-slim'
 " NeoBundle 'airblade/vim-gitgutter'
 
