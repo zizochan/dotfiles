@@ -1,3 +1,6 @@
+# editor
+export EDITOR=vi
+
 # svn
 export SVN_EDITOR=vi
 
