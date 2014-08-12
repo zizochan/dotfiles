@@ -16,6 +16,7 @@ alias gp='git pull --all'
 alias gm='git checkout master'
 alias gl='git log -p'
 alias gh='git checkout'
+alias gn="git now"
 
 # rails
 alias r='rails'
