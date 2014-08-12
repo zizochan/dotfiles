@@ -15,13 +15,29 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'sudo.vim'
-" NeoBundle 'slim-template/vim-slim'
-" NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'slim-template/vim-slim'
 
- call neobundle#end()
+" 括弧自動補完
+NeoBundle 'jiangmiao/auto-pairs'
+
+" 整形
+NeoBundle 'Align'
+
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'
+
+" コメントON/OFFを手軽に実行(Ctrl + ハイフン2回)
+NeoBundle 'tomtom/tcomment_vim'
+
+" ログファイルを色づけしてくれる
+NeoBundle 'vim-scripts/AnsiEsc.vim'
+
+" 行末の半角スペースを可視化
+NeoBundle 'bronson/vim-trailing-whitespace'
+
+call neobundle#end()
 
 filetype plugin indent on
 
@@ -45,6 +61,13 @@ endif
 syntax on
 set laststatus=2 " ステータス表示
 set hlsearch " 検索結果ハイライト
+
+" スワップファイルは使わない(ときどき面倒な警告が出るだけで役に立ったことがない)
+set noswapfile
+
+" 検索ワードの最初の文字を入力した時点で検索を開始する
+set incsearch
+
 
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
