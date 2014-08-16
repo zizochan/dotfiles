@@ -3,7 +3,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
-	pager = lv -c
+	pager = less
 [color]
 	ui = auto
 [alias]
