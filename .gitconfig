@@ -11,5 +11,6 @@
 	br = branch
 	st = status
 	ci = commit
+	che = cherry-pick
 [push]
 	default = current
