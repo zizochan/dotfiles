@@ -9,7 +9,7 @@ export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
 # config
-export HISTSIZE=5000
+export HISTSIZE=30000
 
 # path
 PATH=/opt/local/bin:$PATH
