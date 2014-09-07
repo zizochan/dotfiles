@@ -1,7 +1,7 @@
 # lifehack
 alias cp='cp -i'
 alias less='less -R'
-alias ll='ls -al'
+alias ll='ls -alh'
 alias mv='mv -i'
 alias rm='rm -i'
 alias df="df -h"
@@ -16,7 +16,8 @@ alias gp='git pull --all'
 alias gm='git checkout master'
 alias gl='git log -p'
 alias gh='git checkout'
-alias gn="git now"
+alias gn="git commit -a -m 'tmp commit'"
+alias grm="git rebase -i master"
 
 # rails
 alias r='rails'
