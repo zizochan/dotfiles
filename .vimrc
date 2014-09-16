@@ -37,6 +37,10 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 " 行末の半角スペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
 
+" markdown preview(:PrevimOpen)
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
 call neobundle#end()
 
 filetype plugin indent on
