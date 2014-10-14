@@ -1,2 +1,6 @@
 *~
 .DS_Store
+
+# rvm
+.ruby-gemset
+.ruby-version
