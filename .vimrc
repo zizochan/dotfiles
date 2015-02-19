@@ -22,7 +22,7 @@ NeoBundle 'slim-template/vim-slim'
 " 括弧自動補完
 NeoBundle 'jiangmiao/auto-pairs'
 
-" 整形
+" 整形(:Align [separators])
 NeoBundle 'Align'
 
 " Ruby向けにendを自動挿入してくれる
