@@ -38,9 +38,3 @@ alias svn_revert_all='svn revert --depth infinity .'
 alias v="vim"
 alias lvim="vim -c \"normal '0\"" # open last file
 
-# colordiff
-if [[ -x `which colordiff` ]]; then
-  alias diff='colordiff -u'
-else
-  alias diff='diff -u'
-fi
