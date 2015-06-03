@@ -72,6 +72,8 @@ set noswapfile
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 
+" バックスペースで消せるように対応
+set backspace=indent,eol,start
 
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
