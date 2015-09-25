@@ -75,5 +75,8 @@ set incsearch
 " バックスペースで消せるように対応
 set backspace=indent,eol,start
 
+" インデントをスペースにする
+set expandtab
+
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
