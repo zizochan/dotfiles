@@ -18,6 +18,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'tpope/vim-speeddating'
 
 " 括弧自動補完
 NeoBundle 'jiangmiao/auto-pairs'
