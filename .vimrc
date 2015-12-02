@@ -49,6 +49,9 @@ inoremap <buffer> <expr> <S-=> smartchr#loop(' + ', '+')
 inoremap <buffer> <expr> - smartchr#loop(' - ', '-')
 inoremap <buffer> <expr> , smartchr#loop(', ', ',')
 
+" toggle (+ / CTRL-T)
+NeoBundle 'taku-o/vim-toggle'
+
 call neobundle#end()
 
 filetype plugin indent on
