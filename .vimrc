@@ -82,5 +82,9 @@ set expandtab
 " ESCキー連打で検索結果ハイライトをリセットする
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 
+" ウィンドウ分割をしつつタグジャンプ (tagファイル生成:ctags -R)
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
