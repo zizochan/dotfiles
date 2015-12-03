@@ -42,13 +42,6 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
-" 自動スペース入力
-NeoBundle 'kana/vim-smartchr'
-inoremap <buffer> <expr> = smartchr#loop(' = ', ' == ', '=')
-inoremap <buffer> <expr> <S-=> smartchr#loop(' + ', '+')
-inoremap <buffer> <expr> - smartchr#loop(' - ', '-')
-inoremap <buffer> <expr> , smartchr#loop(', ', ',')
-
 " toggle (+ / CTRL-T)
 NeoBundle 'taku-o/vim-toggle'
 
