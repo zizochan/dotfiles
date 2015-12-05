@@ -6,7 +6,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias df="df -h"
 alias du="du -sh"
-alias f="find . -name "
 
 # git
 alias g='git'

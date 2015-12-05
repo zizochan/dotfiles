@@ -15,3 +15,6 @@ fi
 if [ -f ~/.bash_aliases_local ]; then
     . ~/.bash_aliases_local
 fi
+if [ -f ~/.functions ]; then
+    . ~/.functions
+fi
