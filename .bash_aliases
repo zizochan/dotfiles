@@ -12,9 +12,10 @@ alias g='git'
 alias gb='git branch'
 alias gd='git diff'
 alias gs='git status'
-alias gp='git pull --all'
+alias gp='git pull'
 alias gm='git checkout master'
-alias gl='git log -p'
+alias gl='git log -p --find-renames'
+alias gls='git log --stat=800 --decorate --find-renames'
 alias gh='git checkout'
 alias gn="git commit -a -m 'tmp commit'"
 alias grm="git rebase -i master"
