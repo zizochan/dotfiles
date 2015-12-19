@@ -18,3 +18,6 @@ fi
 if [ -f ~/.functions ]; then
     . ~/.functions
 fi
+if [ -f ~/.functions_local ]; then
+    . ~/.functions_local
+fi
