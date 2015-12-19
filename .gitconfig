@@ -14,3 +14,5 @@
 	che = cherry-pick
 [push]
 	default = current
+[fetch]
+        prune = true
