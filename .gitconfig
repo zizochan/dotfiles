@@ -12,6 +12,7 @@
 	st = status
 	ci = commit
 	che = cherry-pick
+	delete-merged-branches = !git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %
 [push]
 	default = current
 [fetch]
