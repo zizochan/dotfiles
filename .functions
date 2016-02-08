@@ -1,6 +1,6 @@
 # simple find
 function f() {
-  find . -name *$1*
+  find . -name "*$1*"
 }
 
 # git pull origin current
