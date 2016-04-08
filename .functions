@@ -4,8 +4,11 @@ function f() {
 }
 
 # git pull origin current
+function gf() {
+  git fetch --prune
+}
+
 function gp() {
-  git fetch
   current_branch=`git rev-parse --abbrev-ref HEAD`
   git pull origin $current_branch
 }

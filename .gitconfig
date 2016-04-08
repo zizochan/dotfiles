@@ -16,4 +16,4 @@
 [push]
 	default = current
 [fetch]
-        prune = true
+        prune = false
