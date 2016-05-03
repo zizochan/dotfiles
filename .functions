@@ -5,7 +5,7 @@ function f() {
 
 # git pull origin current
 function gf() {
-  git fetch --prune
+  git fetch --all --prune
 }
 
 function gp() {
