@@ -19,6 +19,9 @@ NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'sudo.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'vim-javascript'
+NeoBundle 'html5.vim'
 
 " 括弧自動補完
 NeoBundle 'jiangmiao/auto-pairs'
