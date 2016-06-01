@@ -8,3 +8,4 @@ ln -s ~/dotfiles/.screenrc ~/.screenrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -s ~/dotfiles/.functions ~/.functions
+ln -s ~/dotfiles/.hushlogin ~/.hushlogin
