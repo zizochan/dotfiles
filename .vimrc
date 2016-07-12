@@ -21,7 +21,6 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'vim-javascript'
-NeoBundle 'html5.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 
 " 括弧自動補完
