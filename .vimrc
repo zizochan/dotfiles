@@ -22,6 +22,7 @@ NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'vim-javascript'
 NeoBundle 'html5.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " 括弧自動補完
 NeoBundle 'jiangmiao/auto-pairs'
@@ -91,6 +92,12 @@ set expandtab
 " ウィンドウ分割をしつつタグジャンプ (tagファイル生成:ctags -R)
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+
+" coffee script
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+autocmd BufWritePost *.coffee silent make!
+autocmd QuickFixCmdPost * nested cwindow | redraw!
 
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
