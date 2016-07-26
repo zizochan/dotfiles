@@ -38,3 +38,6 @@ alias svn_revert_all='svn revert --depth infinity .'
 alias v="vim"
 alias lvim="vim -c \"normal '0\"" # open last file
 
+# javascript
+alias gw='gulp watch'
+
