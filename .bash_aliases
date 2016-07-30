@@ -36,6 +36,7 @@ alias rspec='rspec --color --drb'
 
 # vim
 alias v="vim"
+alias view="vim -R"
 #alias lvim="vim -c \"normal '0\"" # open last file
 
 # javascript
