@@ -4,3 +4,6 @@
 # rvm
 .ruby-gemset
 .ruby-version
+
+# rbenv
+.rbenv-gemsets
