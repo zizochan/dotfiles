@@ -50,8 +50,6 @@ NeoBundle 'taku-o/vim-toggle'
 
 call neobundle#end()
 
-filetype plugin indent on
-
 " gitgutter
 nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
 nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
@@ -100,3 +98,5 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+filetype plugin indent on
