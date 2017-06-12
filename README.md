@@ -6,4 +6,4 @@
 ## vim bundle
 * git submodule init
 * git submodule update
-* :NeoBundleInstall
+* vim => :NeoBundleInstall
