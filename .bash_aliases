@@ -26,19 +26,12 @@ alias rs='bundle exec rails server'
 alias db_migrate='bundle exec rake db:migrate'
 alias db_rollback='bundle exec rake db:rollback'
 alias db_seed='bundle exec rake db:seed BULK=1'
-#alias db_Sower='bundle exec rake db:sower'
-alias rspec='rspec --color --drb'
-
-# svn
-#alias s='svn'
-#alias svn_resolve='svn resolve --accept working'
-#alias svn_revert_all='svn revert --depth infinity .'
+alias rspec='bundle exec rspec --color --drb'
+alias itamae='bundle exec itamae local -l debug'
+alias rubocop='bundle exec rubocop'
+alias rcheck='rspec; rubocop'
 
 # vim
 alias v="vim"
 alias view="vim -R"
-#alias lvim="vim -c \"normal '0\"" # open last file
-
-# javascript
-alias gw='gulp watch'
 
