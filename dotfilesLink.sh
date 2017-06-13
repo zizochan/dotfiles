@@ -1,11 +1,14 @@
 #! /bin/bash
-ln -s ~/dotfiles/.bash_aliases ~/.bash_aliases
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.vim/ ~/.vim
-ln -s ~/dotfiles/.screenrc ~/.screenrc
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
-ln -s ~/dotfiles/.functions ~/.functions
-ln -s ~/dotfiles/.hushlogin ~/.hushlogin
+
+dir=$(cd $(dirname $0) && pwd)
+
+ln -siv $dir/.bash_aliases ~/.bash_aliases
+ln -siv $dir/.bashrc ~/.bashrc
+ln -siv $dir/.bash_profile ~/.bash_profile
+ln -siv $dir/.vimrc ~/.vimrc
+ln -siv $dir/.vim/ ~/.vim
+ln -siv $dir/.screenrc ~/.screenrc
+ln -siv $dir/.gitconfig ~/.gitconfig
+ln -siv $dir/.gitignore_global ~/.gitignore_global
+ln -siv $dir/.functions ~/.functions
+ln -siv $dir/.hushlogin ~/.hushlogin
