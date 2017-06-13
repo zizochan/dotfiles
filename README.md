@@ -7,3 +7,6 @@
 * git submodule init
 * git submodule update
 * vim => :NeoBundleInstall
+
+## uninstall
+> removeDotfilesLink.sh
