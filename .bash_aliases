@@ -6,6 +6,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias df="df -h"
 alias du="du -sh"
+alias less="less -qR"
+alias tailf="tail -f"
 
 # git
 alias g='git'
