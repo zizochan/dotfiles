@@ -1,12 +1,21 @@
 # dotfiles
 
-## USAGE
-> dotfilesLink.sh
+# Install
+
+## create links
+dotfilesLink.sh
 
 ## vim bundle
 * git submodule init
 * git submodule update
 * vim => :NeoBundleInstall
 
-## uninstall
-> removeDotfilesLink.sh
+## add giftconfig
+vim .gitconfig.local
+
+> [user]  
+>   name = "Your Name"  
+>   email = you@example.com
+
+## Uninstall
+removeDotfilesLink.sh
