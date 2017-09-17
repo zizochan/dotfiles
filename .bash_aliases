@@ -37,3 +37,6 @@ alias rcheck='rspec; rubocop'
 alias v="vim"
 alias view="vim -R"
 
+# docker
+alias dm="docker-machine"
+
