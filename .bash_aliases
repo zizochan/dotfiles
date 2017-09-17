@@ -38,5 +38,7 @@ alias v="vim"
 alias view="vim -R"
 
 # docker
+alias dk="docker"
+alias doc="docker-compose"
 alias dm="docker-machine"
 
