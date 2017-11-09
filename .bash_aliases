@@ -40,5 +40,5 @@ alias view="vim -R"
 # docker
 alias dk="docker"
 alias doc="docker-compose"
-alias dr="docker-compose run"
+alias dr="docker-compose run --rm"
 
