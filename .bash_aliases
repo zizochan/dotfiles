@@ -31,6 +31,7 @@ alias db_seed='bundle exec rake db:seed BULK=1'
 alias rspec='bundle exec rspec --color --drb'
 alias itamae='bundle exec itamae local -l debug'
 alias rubocop='bundle exec rubocop'
+alias guard='bundle exec guard'
 alias rcheck='rspec; rubocop'
 
 # vim
