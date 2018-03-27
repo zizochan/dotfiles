@@ -96,6 +96,9 @@ autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 autocmd BufWritePost *.coffee silent make!
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
+" autocmd
+autocmd FileType cs setlocal sw=4 sts=4 ts=4 et
+
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
