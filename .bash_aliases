@@ -23,6 +23,7 @@ alias grm="git rebase -i master"
 
 # rails
 alias r='rails'
+alias be='bundle exec'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server'
 alias db_migrate='bundle exec rake db:migrate'
