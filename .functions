@@ -1,6 +1,11 @@
 # simple find
 function f() {
-  find . -name "*$1*"
+  DIR=$2
+  if [ -z "$DIR" ]; then
+    DIR="."
+  fi
+
+  find $DIR -name "*$1*"
 }
 
 # git pull origin current
