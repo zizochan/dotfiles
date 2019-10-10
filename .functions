@@ -8,6 +8,30 @@ function f() {
   find $DIR -name "*$1*"
 }
 
+# git tmp branch shortcut
+function git_tmp_bname() {
+  echo `git_bname`_tmp;
+}
+function mktmp() {
+  git checkout -b `git_tmp_bname`;
+}
+function mvtmp() {
+  git checkout `git_tmp_bname`;
+}
+function deltmp() {
+  git branch -d `git_tmp_bname`;
+}
+function git_base_bname() {
+  echo `git_bname` | sed -e "s/_tmp$//g";
+}
+function mvbase() {
+  git checkout `git_base_bname`;
+}
+function rebbase() {
+  git rebase -i `git_base_bname`;
+}
+
+
 # git pull origin current
 function gf() {
   git fetch --all --prune

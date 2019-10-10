@@ -1,8 +1,8 @@
-#! /bin/bash
+#! /bin/zsh
 
-rm -i ~/.bash_aliases
-rm -i ~/.bashrc
-rm -i ~/.bash_profile
+rm -i ~/.zsh_aliases
+rm -i ~/.zshrc
+rm -i ~/.zprofile
 rm -i ~/.vimrc
 rm -i ~/.vim
 rm -i ~/.screenrc

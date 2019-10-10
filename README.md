@@ -19,3 +19,7 @@ vim .gitconfig.local
 
 ## Uninstall
 removeDotfilesLink.sh
+
+# Prerequisites
+
+* need zsh
