@@ -9,6 +9,12 @@ alias du="du -sh"
 alias less="less -qR"
 alias tailf="tail -f"
 
+# global aliases
+alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail -n 200'
+alias -g G='| grep'
+
 # git
 alias g='git'
 alias gb='git branch'
