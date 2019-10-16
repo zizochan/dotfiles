@@ -12,9 +12,6 @@ compinit
 # editor
 export EDITOR=vi
 
-# 他のターミナルとヒストリーを共有
-setopt share_history
-
 # ヒストリーに重複を表示しない
 setopt histignorealldups
 

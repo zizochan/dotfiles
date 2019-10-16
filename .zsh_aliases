@@ -52,3 +52,5 @@ alias dk="docker"
 alias doc="docker-compose"
 alias dr="docker-compose run --rm"
 
+# python
+alias p="python"
