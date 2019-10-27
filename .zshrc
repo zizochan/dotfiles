@@ -30,7 +30,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 # コマンドミスを修正
-setopt correct
+# setopt correct
 
 # prompt
 PROMPT='%m:%c$ '
