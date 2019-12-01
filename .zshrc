@@ -21,7 +21,7 @@ HISTSIZE=3000
 SAVEHIST=30000
 
 # cdコマンドを省略して、ディレクトリ名のみの入力で移動
-setopt auto_cd
+# setopt auto_cd
 
 # 自動でpushdを実行
 setopt auto_pushd
