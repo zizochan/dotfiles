@@ -41,3 +41,6 @@ export CLICOLOR=true
 # 補完表示後にカーソル移動可能にする
 zstyle ':completion:*:default' menu select=1
 
+# グロッビングによるエラー回避
+setopt nonomatch
+
