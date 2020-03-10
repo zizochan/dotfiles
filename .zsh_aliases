@@ -58,4 +58,4 @@ alias dr="docker-compose run --rm"
 # python
 alias p="python"
 alias pshell="pipenv shell"
-
+alias prun="pipenv run python"
