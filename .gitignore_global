@@ -1,13 +1,6 @@
 *~
 .DS_Store
 
-# rvm
-.ruby-gemset
-.ruby-version
-
-# rbenv
-.rbenv-gemsets
-
 # Visucal Studio
 */.vscode/
 
