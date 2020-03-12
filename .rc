@@ -16,7 +16,7 @@ export EDITOR=vi
 setopt histignorealldups
 
 # config
-HISTFILE=~/.zsh_history
+HISTFILE=~/.history
 HISTSIZE=3000
 SAVEHIST=30000
 
@@ -33,10 +33,12 @@ setopt pushd_ignore_dups
 # setopt correct
 
 # prompt
-PROMPT='%m:%c$ '
+PROMPT='[%n@%m] '
+setopt prompt_subst
 
 # ターミナルをカラーにする
 export CLICOLOR=true
+export LSCOLORS=DxGxcxdxCxegedabagacad
 
 # 補完表示後にカーソル移動可能にする
 zstyle ':completion:*:default' menu select=1
@@ -44,3 +46,7 @@ zstyle ':completion:*:default' menu select=1
 # グロッビングによるエラー回避
 setopt nonomatch
 
+# read local file
+if [ -f ~/.rc_local ]; then
+    . ~/.rc_local
+fi

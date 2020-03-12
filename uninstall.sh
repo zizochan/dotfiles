@@ -1,8 +1,7 @@
-#! /bin/zsh
-
-rm -i ~/.zsh_aliases
-rm -i ~/.zshrc
 rm -i ~/.zprofile
+rm -i ~/.zshrc
+
+rm -i ~/.aliases
 rm -i ~/.vimrc
 rm -i ~/.vim
 rm -i ~/.screenrc

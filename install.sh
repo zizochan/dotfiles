@@ -1,10 +1,9 @@
-#! /bin/zsh
-
 dir=$(cd $(dirname $0) && pwd)
 
-ln -siv $dir/.zsh_aliases ~/.zsh_aliases
-ln -siv $dir/.zshrc ~/.zshrc
-ln -siv $dir/.zprofile ~/.zprofile
+ln -siv $dir/.profile ~/.zprofile
+ln -siv $dir/.rc ~/.zshrc
+
+ln -siv $dir/.aliases ~/.aliases
 ln -siv $dir/.vimrc ~/.vimrc
 ln -siv $dir/.vim/ ~/.vim
 ln -siv $dir/.screenrc ~/.screenrc

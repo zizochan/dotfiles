@@ -3,7 +3,7 @@
 # Install
 
 ## create links
-dotfilesLink.sh
+install.sh
 
 ## vim bundle
 * git submodule init
@@ -18,7 +18,7 @@ vim .gitconfig.local
 >   email = you@example.com
 
 ## Uninstall
-removeDotfilesLink.sh
+uninstall.sh
 
 # Prerequisites
 
