@@ -1,6 +1,9 @@
 rm -i ~/.zprofile
 rm -i ~/.zshrc
 
+rm -i ~/.bash_profile
+rm -i ~/.bashrc
+
 rm -i ~/.aliases
 rm -i ~/.vimrc
 rm -i ~/.vim

@@ -41,3 +41,13 @@ function gp() {
   current_branch=`git rev-parse --abbrev-ref HEAD`
   git pull origin $current_branch
 }
+
+# check bash shell
+function bash_shell_used() {
+  if [ $SHELL = "/bin/bash" ]; then
+    true
+  else
+    false
+  fi
+}
+

@@ -11,13 +11,6 @@ alias tailf="tail -f"
 alias history='fc -l 1'
 alias ps='ps aux'
 
-# global aliases
-alias -g L='| less'
-alias -g H='| head'
-alias -g T='| tail -n 200'
-alias -g G='| grep'
-alias -g S='| sort | uniq'
-
 # git
 alias g='git'
 alias gb='git branch'
@@ -59,3 +52,13 @@ alias dr="docker-compose run --rm"
 alias p="python"
 alias pshell="pipenv shell"
 alias prun="pipenv run python"
+
+# global aliases (zsh only)
+if ! bash_shell_used; then
+  alias -g L='| less'
+  alias -g H='| head'
+  alias -g T='| tail -n 200'
+  alias -g G='| grep'
+  alias -g S='| sort | uniq'
+fi
+

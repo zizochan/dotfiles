@@ -2,8 +2,8 @@
 
 # Install
 
-## create links
-install.sh
+## create sym links
+./install.sh
 
 ## vim bundle
 * git submodule init
@@ -18,8 +18,5 @@ vim .gitconfig.local
 >   email = you@example.com
 
 ## Uninstall
-uninstall.sh
+./uninstall.sh
 
-# Prerequisites
-
-* need zsh

@@ -1,7 +1,15 @@
 dir=$(cd $(dirname $0) && pwd)
 
-ln -siv $dir/.profile ~/.zprofile
-ln -siv $dir/.rc ~/.zshrc
+# bash判定のために必要
+. ./.functions
+
+if bash_shell_used; then
+  ln -siv $dir/.profile ~/.bash_profile
+  ln -siv $dir/.rc ~/.bashrc
+else
+  ln -siv $dir/.profile ~/.zprofile
+  ln -siv $dir/.rc ~/.zshrc
+fi
 
 ln -siv $dir/.aliases ~/.aliases
 ln -siv $dir/.vimrc ~/.vimrc
