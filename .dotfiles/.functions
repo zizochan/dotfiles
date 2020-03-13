@@ -42,6 +42,7 @@ function gp() {
   git pull origin $current_branch
 }
 
+
 # check bash shell
 function bash_shell_used() {
   if [ $SHELL = "/bin/bash" ]; then
@@ -51,3 +52,23 @@ function bash_shell_used() {
   fi
 }
 
+function use_shell() {
+  local filepath=$1
+  if [ -z $filepath ]; then
+    return
+  fi
+
+  if [ -f $filepath ]; then
+      . $filepath
+  fi
+}
+
+function use_dotfiles_shell() {
+  local filepath=$1
+  if [ -z $filepath ]; then
+    return
+  fi
+
+  local dotfiles_dir=~/.dotfiles
+  use_shell $dotfiles_dir/$filepath
+}

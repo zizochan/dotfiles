@@ -1,19 +1,11 @@
-dotfiles_dir=~/.dotfiles
+. ~/.dotfiles/.functions
 
-. $dotfiles_dir/.functions
-. $dotfiles_dir/.aliases
-
-if [ -f $dotfiles_dir/.functions.local ]; then
-    . $dotfiles_dir/.functions.local
-fi
-if [ -f $dotfiles_dir/.profile.local ]; then
-    . $dotfiles_dir/.profile.local
-fi
-if [ -f $dotfiles_dir/.aliases.local ]; then
-    . $dotfiles_dir/.aliases.local
-fi
+use_dotfiles_shell .aliases
+use_dotfiles_shell .functions.local
+use_dotfiles_shell .profile.local
+use_dotfiles_shell .aliases.local
 
 # bash only
 if bash_shell_used; then
-        . ~/.bashrc
+        use_shell ~/.bashrc
 fi

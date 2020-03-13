@@ -1,13 +1,21 @@
-rm -i ~/.zprofile
-rm -i ~/.zshrc
+files=(.zprofile .zshrc .bash_profile .bashrc .dotfiles .vimrc .vim .screenrc .gitconfig .gitignore_global .hushlogin)
 
-rm -i ~/.bash_profile
-rm -i ~/.bashrc
+function remove_homedir_symlink() {
+  local filepath=~/$1
+  if [ -z $filepath ]; then
+    return
+  fi
 
-rm -i ~/.dotfiles
-rm -i ~/.vimrc
-rm -i ~/.vim
-rm -i ~/.screenrc
-rm -i ~/.gitconfig
-rm -i ~/.gitignore_global
-rm -i ~/.hushlogin
+  if [ ! -L $filepath ]; then
+    return
+  fi
+
+  rm -f $filepath
+}
+
+for file in ${files[@]}
+do
+  remove_homedir_symlink $file
+done
+
+echo "uninstalled!"

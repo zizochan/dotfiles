@@ -3,18 +3,46 @@ dir=$(cd $(dirname $0) && pwd)
 # bash判定のために必要
 . $dir/.dotfiles/.functions
 
+function create_homedir_symlink() {
+  local basepath=$dir/$1
+  if [ -z $basepath ]; then
+    return
+  fi
+
+  # 第２引数で出力ファイル名変更可能
+  local outname=$2
+  if [ -z $outname ]; then
+    local outname=$1
+  fi
+
+  local outpath=~/$outname
+  if [ -e $outpath ]; then
+    return
+  fi
+
+  ln -siv $basepath $outpath
+}
+
+
+# bash
 if bash_shell_used; then
-  ln -siv $dir/.profile ~/.bash_profile
-  ln -siv $dir/.bashrc ~/.bashrc
+  create_homedir_symlink .profile .bash_profile
+  create_homedir_symlink .bashrc
+
+# zsh
 else
-  ln -siv $dir/.profile ~/.zprofile
-  ln -siv $dir/.zshrc ~/.zshrc
+  create_homedir_symlink .profile .zprofile
+  create_homedir_symlink .zshrc
 fi
 
-ln -siv $dir/.dotfiles ~/.dotfiles
-ln -siv $dir/.vimrc ~/.vimrc
-ln -siv $dir/.vim/ ~/.vim
-ln -siv $dir/.screenrc ~/.screenrc
-ln -siv $dir/.gitconfig ~/.gitconfig
-ln -siv $dir/.gitignore_global ~/.gitignore_global
-ln -siv $dir/.hushlogin ~/.hushlogin
+
+# common
+files=(.dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin)
+for file in ${files[@]}
+do
+  create_homedir_symlink $file
+done
+create_homedir_symlink .vim/ .vim
+
+echo "installed!"
+

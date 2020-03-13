@@ -1,7 +1,5 @@
 # read common file
-if [ -f $dotfiles_dir/.rc.common ]; then
-    . $dotfiles_dir/.rc.common
-fi
+use_dotfiles_shell .rc.common
 
 # prompt
 export PS1="\h:\W "
