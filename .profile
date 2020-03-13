@@ -1,14 +1,16 @@
-. ~/.functions
-. ~/.aliases
+dotfiles_dir=~/.dotfiles
 
-if [ -f ~/.functions_local ]; then
-    . ~/.functions_local
+. $dotfiles_dir/.functions
+. $dotfiles_dir/.aliases
+
+if [ -f $dotfiles_dir/.functions.local ]; then
+    . $dotfiles_dir/.functions.local
 fi
-if [ -f ~/.profile_local ]; then
-    . ~/.profile_local
+if [ -f $dotfiles_dir/.profile.local ]; then
+    . $dotfiles_dir/.profile.local
 fi
-if [ -f ~/.aliases_local ]; then
-    . ~/.aliases_local
+if [ -f $dotfiles_dir/.aliases.local ]; then
+    . $dotfiles_dir/.aliases.local
 fi
 
 # bash only

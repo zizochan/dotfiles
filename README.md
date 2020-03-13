@@ -17,6 +17,21 @@ vim .gitconfig.local
 >   name = "Your Name"  
 >   email = you@example.com
 
-## Uninstall
+# Uninstall
+
+## remove sym links
 ./uninstall.sh
+
+
+# Other
+
+## optional files
+These files are not committed to git.
+
+* .dotfiles/.aliases.local
+* .dotfiles/.functions.local
+* .dotfiles/.profile.local
+* .dotfiles/.rc.local
+
+
 

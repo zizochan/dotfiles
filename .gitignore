@@ -2,3 +2,8 @@
 !.vim/bundle/.gitkeep
 !.vim/bundle/neobundle.vim
 .vim/.netrwhist
+
+.dotfiles/.aliases.local
+.dotfiles/.functions.local
+.dotfiles/.profile.local
+.dotfiles/.rc.local
