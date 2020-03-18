@@ -54,7 +54,7 @@ alias pshell="pipenv shell"
 alias prun="pipenv run python"
 
 # global aliases (zsh only)
-if ! bash_shell_used; then
+if ! is_bash_shell; then
   alias -g L='| less'
   alias -g H='| head'
   alias -g T='| tail -n 200'

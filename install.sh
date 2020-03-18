@@ -25,7 +25,7 @@ function create_homedir_symlink() {
 
 
 # bash
-if bash_shell_used; then
+if is_bash_shell; then
   create_homedir_symlink .profile .bash_profile
   create_homedir_symlink .bashrc
 

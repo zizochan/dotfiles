@@ -43,8 +43,7 @@ function gp() {
 }
 
 
-# check bash shell
-function bash_shell_used() {
+function is_bash_shell() {
   if [ $SHELL = "/bin/bash" ]; then
     true
   else
@@ -52,7 +51,7 @@ function bash_shell_used() {
   fi
 }
 
-function use_shell() {
+function read_source() {
   local filepath=$1
   if [ -z $filepath ]; then
     return
@@ -63,12 +62,12 @@ function use_shell() {
   fi
 }
 
-function use_dotfiles_shell() {
+function read_dotfiles_source() {
   local filepath=$1
   if [ -z $filepath ]; then
     return
   fi
 
   local dotfiles_dir=~/.dotfiles
-  use_shell $dotfiles_dir/$filepath
+  read_source $dotfiles_dir/$filepath
 }

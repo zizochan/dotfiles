@@ -1,11 +1,11 @@
 . ~/.dotfiles/.functions
 
-use_dotfiles_shell .aliases
-use_dotfiles_shell .functions.local
-use_dotfiles_shell .profile.local
-use_dotfiles_shell .aliases.local
+read_dotfiles_source .aliases
+read_dotfiles_source .functions.local
+read_dotfiles_source .profile.local
+read_dotfiles_source .aliases.local
 
 # bash only
-if bash_shell_used; then
-        use_shell ~/.bashrc
+if is_bash_shell; then
+        read_source ~/.bashrc
 fi

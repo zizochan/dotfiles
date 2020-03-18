@@ -14,4 +14,4 @@ export CLICOLOR=true
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
 # read local file
-use_dotfiles_shell .rc.local
+read_dotfiles_source .rc.local

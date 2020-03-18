@@ -1,7 +1,7 @@
 . ~/.dotfiles/.functions
 
 # read common file
-use_dotfiles_shell .rc.common
+read_dotfiles_source .rc.common
 
 # 色を使用
 autoload -Uz colors
