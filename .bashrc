@@ -1,3 +1,5 @@
+~/.dotfiles/.functions
+
 # read common file
 use_dotfiles_shell .rc.common
 
