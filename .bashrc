@@ -1,4 +1,4 @@
-~/.dotfiles/.functions
+. ~/.dotfiles/.functions
 
 # read common file
 read_dotfiles_source .rc.common
