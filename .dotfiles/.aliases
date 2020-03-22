@@ -10,6 +10,7 @@ alias less="less -qR"
 alias tailf="tail -f"
 alias history='fc -l 1'
 alias ps='ps aux'
+alias crontab="crontab -i"
 
 # git
 alias g='git'
