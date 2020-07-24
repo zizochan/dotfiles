@@ -1,6 +1,9 @@
 *~
 .DS_Store
 
+# rails
+.rbenv-gemsets
+
 # Visucal Studio
 */.vscode/
 
