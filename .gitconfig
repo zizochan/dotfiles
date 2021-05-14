@@ -17,3 +17,5 @@
 	default = current
 [fetch]
         prune = false
+[pull]
+	rebase = false
