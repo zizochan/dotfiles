@@ -31,7 +31,7 @@ alias git_bname='git symbolic-ref --short HEAD'
 # rails
 alias r='bin/rails'
 alias be='bundle exec'
-alias rc='bin/rails console'
+alias rc='bin/rails console -- --nomultiline'
 alias rs='bin/rails server'
 alias db_migrate='bin/rake db:migrate'
 alias db_rollback='bin/rake db:rollback'
@@ -40,6 +40,7 @@ alias rspec='bundle exec rspec --color'
 alias rubocop='bundle exec rubocop'
 alias guard='bundle exec guard'
 alias rcheck='rspec; rubocop'
+alias irb='irb --nomultiline'
 
 # vim
 alias v="vim"
