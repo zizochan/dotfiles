@@ -23,7 +23,7 @@ alias gl='git log -p --find-renames'
 alias gls='git log --stat=800 --decorate --find-renames'
 alias gln='git log --stat=800 --name-only'
 alias gh='git checkout'
-alias gn="git commit -a -m 'fix'"
+alias gn="git commit -a -m '[ci skip] fix'"
 alias gr="git rebase -i "
 alias gdel="git branch -d "
 alias git_bname='git symbolic-ref --short HEAD'
