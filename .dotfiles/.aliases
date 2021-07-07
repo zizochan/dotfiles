@@ -25,6 +25,7 @@ alias gln='git log --stat=800 --name-only'
 alias gh='git checkout'
 alias gn="git commit -a -m '[ci skip] fix'"
 alias gr="git rebase -i "
+alias grd="git rebase -i develop"
 alias gdel="git branch -d "
 alias git_bname='git symbolic-ref --short HEAD'
 
