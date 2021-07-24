@@ -37,7 +37,7 @@ fi
 
 
 # common
-files=(.dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin)
+files=(.dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin .irbrc)
 for file in ${files[@]}
 do
   create_homedir_symlink $file
