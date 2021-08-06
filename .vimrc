@@ -25,8 +25,10 @@ NeoBundle 'kchmck/vim-coffee-script'
 " 括弧自動補完
 NeoBundle 'jiangmiao/auto-pairs'
 
-" 整形(:Align [separators])
-NeoBundle 'Align'
+" 整形(ga)
+NeoBundle 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
