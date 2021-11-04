@@ -23,7 +23,6 @@ function create_homedir_symlink() {
   ln -siv $basepath $outpath
 }
 
-
 # bash
 if is_bash_shell; then
   create_homedir_symlink .profile .bash_profile
@@ -36,13 +35,16 @@ else
 fi
 
 
+# vim
+create_homedir_symlink .vim/ .vim
+create_homedir_symlink nvim .config/nvim
+
 # common
 files=(.dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin .irbrc)
 for file in ${files[@]}
 do
   create_homedir_symlink $file
 done
-create_homedir_symlink .vim/ .vim
 
 echo "installed!"
 
