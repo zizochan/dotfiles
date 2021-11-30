@@ -38,9 +38,9 @@ alias db_migrate='bin/rake db:migrate'
 alias db_rollback='bin/rake db:rollback'
 alias db_seed='bin/rake db:seed BULK=1'
 alias rspec='bundle exec rspec --color'
-alias rubocop='bundle exec rubocop'
+alias rubocop='bundle exec rubocop -a'
 alias guard='bundle exec guard'
-alias rcheck='rspec; rubocop'
+alias rcheck='rubocop -a; rspec'
 alias irb='irb --nomultiline'
 
 # vim
