@@ -1,65 +1,53 @@
-set nocompatible
-filetype plugin indent off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Required:
+call dein#begin('$HOME/.cache/dein')
 
-" My Bundles here:
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'The-NERD-tree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sudo.vim'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
+" Let dein manage dein
+" Required:
+call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+call dein#add('scrooloose/nerdtree')
+
+" syntax
+call dein#add('scrooloose/syntastic')
+call dein#add('slim-template/vim-slim')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('vim-scripts/vim-javascript')
+call dein#add('kchmck/vim-coffee-script')
+
+" 日時をインクリメント／デクリメント
+call dein#add('tpope/vim-speeddating')
 
 " 括弧自動補完
-NeoBundle 'jiangmiao/auto-pairs'
+call dein#add('jiangmiao/auto-pairs')
 
 " 整形(ga)
-NeoBundle 'junegunn/vim-easy-align'
+call dein#add('junegunn/vim-easy-align')
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Ruby向けにendを自動挿入してくれる
-NeoBundle 'tpope/vim-endwise'
+call dein#add('tpope/vim-endwise')
 
 " コメントON/OFFを手軽に実行(Ctrl + ハイフン2回)
-NeoBundle 'tomtom/tcomment_vim'
+call dein#add('tomtom/tcomment_vim')
 
 " ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
+call dein#add('vim-scripts/AnsiEsc.vim')
 
 " 行末の半角スペースを可視化
-NeoBundle 'bronson/vim-trailing-whitespace'
+call dein#add('bronson/vim-trailing-whitespace')
 
-" markdown preview(:PrevimOpen)
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-
-" toggle (+ / CTRL-T)
-NeoBundle 'taku-o/vim-toggle'
-
-call neobundle#end()
-
-" gitgutter
-nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
-nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
-
-" syntastic
-let g:loaded_syntastic_slim_slimrb_checker = 0
-
-"隠しファイルを表示する。
-let NERDTreeShowHidden = 1
+" Required:
+call dein#end()
 
 "引数なしで実行したとき、NERDTreeを実行する
 let file_name = expand("%:p")
@@ -67,19 +55,8 @@ if has('vim_starting') &&  file_name == ""
   autocmd VimEnter * execute 'NERDTree ./'
 endif
 
-" other
-syntax on
-set laststatus=2 " ステータス表示
-set hlsearch " 検索結果ハイライト
-
-" スワップファイルは使わない(ときどき面倒な警告が出るだけで役に立ったことがない)
+" スワップファイルは使わない
 set noswapfile
-
-" 検索ワードの最初の文字を入力した時点で検索を開始する
-set incsearch
-
-" バックスペースで消せるように対応
-set backspace=indent,eol,start
 
 " インデントをスペースにする
 set expandtab
@@ -87,20 +64,15 @@ set expandtab
 " ESCキー連打で検索結果ハイライトをリセットする
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 
-" ウィンドウ分割をしつつタグジャンプ (tagファイル生成:ctags -R)
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
-
-" coffee script
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
-autocmd BufWritePost *.coffee silent make!
-autocmd QuickFixCmdPost * nested cwindow | redraw!
-
-" autocmd
-autocmd FileType cs setlocal sw=4 sts=4 ts=4 et
-
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Required:
 filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------

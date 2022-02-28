@@ -40,12 +40,13 @@ alias db_seed='bin/rake db:seed BULK=1'
 alias rspec='bundle exec rspec --color'
 alias rubocop='bundle exec rubocop -a'
 alias guard='bundle exec guard'
-alias rcheck='rubocop -a; rspec'
+alias rcheck='rubocop -a; bundle exec parallel_rspec -n 3 spec'
 alias irb='irb --nomultiline'
 
 # vim
 alias v="nvim"
-alias view="vim -R"
+alias vim="nvim"
+alias view="nvim -R"
 
 # docker
 alias dk="docker"

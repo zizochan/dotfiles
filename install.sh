@@ -34,9 +34,7 @@ else
   create_homedir_symlink .zshrc
 fi
 
-
 # vim
-create_homedir_symlink .vim/ .vim
 create_homedir_symlink nvim .config/nvim
 
 # common

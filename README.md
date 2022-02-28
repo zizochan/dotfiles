@@ -5,10 +5,19 @@
 ## create sym links
 ./install.sh
 
-## vim bundle
-* git submodule init
-* git submodule update
-* vim => :NeoBundleInstall
+## vim install
+
+### neovim
+brew install neovim
+
+### dein vim
+```
+mkdir -p ~/.cache/dein
+cd ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
+rm -f installer.sh
+```
 
 ## add giftconfig
 vim .gitconfig.local

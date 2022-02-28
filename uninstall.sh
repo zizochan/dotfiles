@@ -1,4 +1,4 @@
-files=(.zprofile .zshrc .bash_profile .bashrc .dotfiles .vimrc .vim .screenrc .gitconfig .gitignore_global .hushlogin)
+files=(.zprofile .zshrc .bash_profile .bashrc .dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin)
 
 function remove_homedir_symlink() {
   local filepath=~/$1
