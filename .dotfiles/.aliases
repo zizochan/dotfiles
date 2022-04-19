@@ -40,8 +40,8 @@ alias db_seed='bin/rake db:seed BULK=1'
 alias rspec='bundle exec rspec --color'
 alias rubocop='bundle exec rubocop -a'
 alias guard='bundle exec guard'
-alias rcheck='rubocop -a; parallel_rspec'
-alias parallel_rspec='bundle exec parallel_rspec -n 3 spec'
+alias rcheck='rubocop -a; rspec_parallel'
+alias rspec_parallel='bundle exec parallel_rspec -n 3 spec'
 alias irb='irb --nomultiline'
 
 # vim
