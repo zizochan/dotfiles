@@ -59,6 +59,10 @@ alias p="python"
 alias pshell="pipenv shell"
 alias prun="pipenv run python"
 
+# terraform
+alias t="terraform"
+alias tcheck="terraform fmt; terraform validate; tflint"
+
 # global aliases (zsh only)
 if ! is_bash_shell; then
   alias -g L='| less'
