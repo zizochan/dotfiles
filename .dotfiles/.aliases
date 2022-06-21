@@ -61,7 +61,7 @@ alias prun="pipenv run python"
 
 # terraform
 alias t="terraform"
-alias tcheck="terraform fmt; terraform validate; tflint"
+alias tcheck="terraform fmt -recursive; terraform validate; tflint"
 
 # global aliases (zsh only)
 if ! is_bash_shell; then
