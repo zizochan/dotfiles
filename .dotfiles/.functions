@@ -71,3 +71,22 @@ function read_dotfiles_source() {
   local dotfiles_dir=~/.dotfiles
   read_source $dotfiles_dir/$filepath
 }
+
+function replace() {
+    local str1=$1
+    shift
+    local str2=$1
+    shift
+    local dir=$*
+
+    if [ -z ${str1} -o -z ${str2} ]; then
+        echo "[USAGE] replace str1 str2 dir"
+        return
+    fi
+
+    if [ -z ${dir} ]; then
+        dir="./"
+    fi
+
+    ag -l ${str1} -R ${(z)dir} | xargs sed -i '' -e "s/${str1}/${str2}/g"
+}
