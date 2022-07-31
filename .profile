@@ -7,5 +7,5 @@ read_dotfiles_source .aliases.local
 
 # bash only
 if is_bash_shell; then
-        read_source ~/.bashrc
+  read_source ~/.bashrc
 fi

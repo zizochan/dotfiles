@@ -10,27 +10,26 @@ function f() {
 
 # git tmp branch shortcut
 function git_tmp_bname() {
-  echo `git_bname`_tmp;
+  echo $(git_bname)_tmp
 }
 function mktmp() {
-  git checkout -b `git_tmp_bname`;
+  git checkout -b $(git_tmp_bname)
 }
 function mvtmp() {
-  git checkout `git_tmp_bname`;
+  git checkout $(git_tmp_bname)
 }
 function deltmp() {
-  git branch -d `git_tmp_bname`;
+  git branch -d $(git_tmp_bname)
 }
 function git_base_bname() {
-  echo `git_bname` | sed -e "s/_tmp$//g";
+  echo $(git_bname) | sed -e "s/_tmp$//g"
 }
 function mvbase() {
-  git checkout `git_base_bname`;
+  git checkout $(git_base_bname)
 }
 function rebbase() {
-  git rebase -i `git_base_bname`;
+  git rebase -i $(git_base_bname)
 }
-
 
 # git pull origin current
 function gf() {
@@ -38,10 +37,9 @@ function gf() {
 }
 
 function gp() {
-  current_branch=`git rev-parse --abbrev-ref HEAD`
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
   git pull origin $current_branch
 }
-
 
 function is_bash_shell() {
   if [ $SHELL = "/bin/bash" ]; then
@@ -58,7 +56,7 @@ function read_source() {
   fi
 
   if [ -f $filepath ]; then
-      . $filepath
+    . $filepath
   fi
 }
 
@@ -73,20 +71,20 @@ function read_dotfiles_source() {
 }
 
 function replace() {
-    local str1=$1
-    shift
-    local str2=$1
-    shift
-    local dir=$*
+  local str1=$1
+  shift
+  local str2=$1
+  shift
+  local dir=$*
 
-    if [ -z ${str1} -o -z ${str2} ]; then
-        echo "[USAGE] replace str1 str2 dir"
-        return
-    fi
+  if [ -z ${str1} -o -z ${str2} ]; then
+    echo "[USAGE] replace str1 str2 dir"
+    return
+  fi
 
-    if [ -z ${dir} ]; then
-        dir="./"
-    fi
+  if [ -z ${dir} ]; then
+    dir="./"
+  fi
 
-    ag -l ${str1} -R ${(z)dir} | xargs sed -i '' -e "s/${str1}/${str2}/g"
+  ag -l ${str1} -R ${(z)dir} | xargs sed -i '' -e "s/${str1}/${str2}/g"
 }
