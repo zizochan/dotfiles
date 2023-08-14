@@ -50,9 +50,8 @@ alias vim="nvim"
 alias view="nvim -R"
 
 # docker
-alias dk="docker"
-alias doc="docker-compose"
-alias dr="docker-compose run --rm"
+alias dr="docker-compose run --rm web"
+alias drr='docker-compose run --rm web rails'
 
 # python
 alias p="python"
