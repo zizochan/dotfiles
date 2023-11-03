@@ -51,8 +51,9 @@ alias view="nvim -R"
 
 # docker
 alias dr="docker-compose run --rm web"
-alias drr='docker-compose run --rm web rails'
-alias drcheck='dr rubocop -a; dr rspec'
+alias drr='dr rails'
+alias drb='dr bundle exec'
+alias drcheck='drb rubocop; drb rspec'
 
 # python
 alias p="python"
