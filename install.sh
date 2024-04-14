@@ -38,7 +38,7 @@ fi
 create_homedir_symlink nvim .config/nvim
 
 # common
-files=(.dotfiles .vimrc .screenrc .gitconfig .gitignore_global .hushlogin .irbrc)
+files=(.dotfiles .vimrc .screenrc .gitconfig .gitconfig.local .gitignore_global .hushlogin .irbrc)
 for file in ${files[@]}
 do
   create_homedir_symlink $file

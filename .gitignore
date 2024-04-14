@@ -3,6 +3,8 @@
 !.vim/bundle/neobundle.vim
 .vim/.netrwhist
 
+.gitconfig.local
+
 .dotfiles/.aliases.local
 .dotfiles/.functions.local
 .dotfiles/.profile.local
