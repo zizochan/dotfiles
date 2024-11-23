@@ -22,9 +22,11 @@ rm -f installer.sh
 ## add giftconfig
 vim .gitconfig.local
 
-> [user]  
->   name = "Your Name"  
->   email = you@example.com
+```
+[user]
+  name = "Your Name"
+  email = you@example.com
+```
 
 # Uninstall
 

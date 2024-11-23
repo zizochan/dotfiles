@@ -15,3 +15,6 @@ export LSCOLORS=DxGxcxdxCxegedabagacad
 
 # read local file
 read_dotfiles_source .rc.local
+
+# read brew
+export PATH="/opt/homebrew/bin:/$PATH"
