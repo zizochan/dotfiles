@@ -1,11 +1,18 @@
 # simple find
 function f() {
-  DIR=$2
+  WORD="$1"
+  DIR="$2"
+
   if [ -z "$DIR" ]; then
     DIR="."
   fi
 
-  find $DIR -name "*$1*"
+  # 検索ワードを NFD と NFC に変換
+  WORD_NFD=$(echo "$WORD" | iconv -f UTF-8 -t UTF-8-MAC)
+  WORD_NFC=$(echo "$WORD" | iconv -f UTF-8-MAC -t UTF-8)
+
+  # 両方で検索（重複は uniq で除去）
+  find "$DIR" \( -name "*$WORD_NFD*" -o -name "*$WORD_NFC*" \) | uniq
 }
 
 # git tmp branch shortcut
