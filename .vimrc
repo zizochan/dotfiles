@@ -64,6 +64,9 @@ set expandtab
 " ESCキー連打で検索結果ハイライトをリセットする
 :nnoremap <ESC><ESC> :nohlsearch<CR>
 
+" gitコミットメッセージのハイライトを無効化する
+let g:gitcommit_summary_length = -1
+
 " set last position
 :au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
