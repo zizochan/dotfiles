@@ -79,19 +79,18 @@ function read_dotfiles_source() {
 
 function replace() {
   local str1=$1
-  shift
-  local str2=$1
-  shift
-  local dir=$*
+  local str2=$2
+  shift 2
+  local dir=("$@")
 
-  if [ -z ${str1} -o -z ${str2} ]; then
+  if [ -z "${str1}" ] || [ -z "${str2}" ]; then
     echo "[USAGE] replace str1 str2 dir"
     return
   fi
 
-  if [ -z ${dir} ]; then
-    dir="./"
+  if [ ${#dir[@]} -eq 0 ]; then
+    dir=("./")
   fi
 
-  ag -l ${str1} -R ${(z)dir} | xargs sed -i '' -e "s/${str1}/${str2}/g"
+  ag -l -0 "${str1}" "${dir[@]}" | xargs -0 sed -i '' -e "s/${str1}/${str2}/g"
 }
